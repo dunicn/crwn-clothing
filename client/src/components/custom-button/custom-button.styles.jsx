@@ -10,7 +10,7 @@ const buttonStyles = css`
         background-color: white;
         color: black;
         border: 1px solid black;
-      }
+}
 `;
 
 
