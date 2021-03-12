@@ -28,6 +28,10 @@ export const UpdateCartInFirebase = () => ({
     type: CartActionTypes.UPDATE_CART_IN_FIREBASE
 });
 
+export const checkOutSuccess = () => ({
+    type: CartActionTypes.CLEAR_CART
+});
+
 export const setCartFromFirebase = cartItems => ({
     type: CartActionTypes.SET_CART_FROM_FIREBASE,
     payload: cartItems
