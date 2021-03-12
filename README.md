@@ -15,8 +15,8 @@ This is an e-commerce web application that allows users to buy clothes and acces
 
 ## Short-term plans:
 #### Cart:
-- [ ] move cart for any signed user to firebase (when they sign in again, they can continue where they left off)
-- [ ] clear cart after "payment successful" alert
+- [x] move cart for any signed user to firebase (when they sign in again, they can continue where they left off)
+- [x] clear cart after "payment successful" alert
 #### Testing:
 - [ ] write tests for the majority of the components in jest 
 
