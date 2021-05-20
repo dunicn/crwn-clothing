@@ -1,45 +1,52 @@
 import styled from 'styled-components';
 
-export const MenuItemContainer = styled.div`
-	height: ${({ size }) => (size ? '380px' : '240px')};
-	min-width: 30%;
-	overflow: hidden;
-	flex: 1 1 auto;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	border: 1px solid black;
-	margin: 0 7.5px 15px;
-	overflow: hidden;
+interface MenuItemContainerInterface {
+  size: string;
+}
 
-	&:hover {
-		cursor: pointer;
+export const MenuItemContainer = styled.div<MenuItemContainerInterface>`
+  height: ${({ size }) => (size ? '380px' : '240px')};
+  min-width: 30%;
+  overflow: hidden;
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  margin: 0 7.5px 15px;
+  overflow: hidden;
 
-		& .background-image {
-		  transform: scale(1.1);
-			transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
-		}
+  &:hover {
+    cursor: pointer;
 
-		& .content {
-			opacity: 0.9;
-		}
-	}
+    & .background-image {
+      transform: scale(1.1);
+      transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+    }
 
-	&:first-child {
+    & .content {
+      opacity: 0.9;
+    }
+  }
+
+  &:first-child {
     margin-right: 7.5px;
   }
 
   &:last-child {
     margin-left: 7.5px;
   }
-  
+
   @media screen and (max-width: 800px) {
     height: 200px;
-    
-}
+  }
 `;
 
-export const BackgroundImageContainer = styled.div`
+interface BackgroundImageContainerInterface {
+  imageUrl: string;
+}
+
+export const BackgroundImageContainer = styled.div<BackgroundImageContainerInterface>`
   width: 100%;
   height: 100%;
   background-size: cover;

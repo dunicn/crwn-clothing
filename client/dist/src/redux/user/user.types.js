@@ -1,4 +1,6 @@
-const UserActionTypes = {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var UserActionTypes = {
     SET_CURRENT_USER: 'SET_CURRENT_USER',
     GOOGLE_SIGN_IN_START: 'GOOGLE_SIGN_IN_START',
     EMAIL_SIGN_IN_START: 'EMAIL_SIGN_IN_START',
@@ -11,7 +13,6 @@ const UserActionTypes = {
     SIGN_UP_START: 'SIGN_UP_START',
     SIGN_UP_SUCCESS: 'SIGN_UP_SUCCESS',
     SIGN_UP_FAILURE: 'SIGN_UP_FAILURE',
-    CHECKOUT_SUCCESS: 'CHECKOUT_SUCCESS'
+    CHECKOUT_SUCCESS: 'CHECKOUT_SUCCESS',
 };
-
-export default UserActionTypes;
+exports.default = UserActionTypes;

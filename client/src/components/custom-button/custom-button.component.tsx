@@ -6,7 +6,7 @@ interface CustomButtonInterface {
   children: any;
   props?: any;
   onClick: () => any;
-  inverted: boolean;
+  inverted?: boolean;
 }
 
 const CustomButton: React.FC<CustomButtonInterface> = ({

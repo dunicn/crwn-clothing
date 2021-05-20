@@ -8,21 +8,17 @@ export interface ItemInterface {
   name?: string;
   quantity?: number;
   id?: string;
+  item?: any; //cart-dropdown
 }
 
-const CartItem: React.FC<ItemInterface> = ({
-  imageUrl,
-  price,
-  name,
-  quantity,
-}) => (
+const CartItem: React.FC<ItemInterface> = ({ item }) => (
   <div className='cart-item'>
-    <img src={imageUrl} alt='item' />
+    <img src={item.imageUrl} alt='item' />
     <div className='item-details'>
-      <span className='name'>{name}</span>
+      <span className='name'>{}</span>
       <span className='price'>
         {' '}
-        {quantity} x ${price}
+        {item.quantity} x ${item.price}
       </span>
     </div>
   </div>
