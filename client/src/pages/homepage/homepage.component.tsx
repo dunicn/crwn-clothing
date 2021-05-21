@@ -4,10 +4,10 @@ import Directory from '../../components/directory/directory.component';
 
 import { HomePageContainer } from './homepage.styles';
 
-const HomePage = () => (
-    <HomePageContainer>
-        <Directory />
-    </HomePageContainer>
+const HomePage: () => JSX.Element = () => (
+  <HomePageContainer>
+    <Directory />
+  </HomePageContainer>
 );
 
 export default HomePage;

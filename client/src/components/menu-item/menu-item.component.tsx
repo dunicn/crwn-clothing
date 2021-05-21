@@ -12,28 +12,23 @@ import {
 interface MenuItemInterface {
   title: string;
   imageUrl: string;
-  size: string;
+  size?: any; // why not string?
   linkUrl: string;
+  key?: any;
+  id?: any;
 }
 
-const MenuItem: React.FC<MenuItemInterface & RouteComponentProps> = ({
-  title,
-  imageUrl,
-  size,
-  history,
-  linkUrl,
-  match,
-}) => (
+const MenuItem: React.FC<MenuItemInterface & RouteComponentProps> = (props) => (
   <MenuItemContainer
-    size={size}
-    onClick={() => history.push(`${match.url}${linkUrl}`)}
+    size={props.size}
+    onClick={() => props.history.push(`${props.match.url}${props.linkUrl}`)}
   >
     <BackgroundImageContainer
       className='background-image'
-      imageUrl={imageUrl}
+      imageUrl={props.imageUrl}
     />
     <ContentContainer className='content'>
-      <ContentTitle>{title.toUpperCase()}</ContentTitle>
+      <ContentTitle>{props.title!.toUpperCase()}</ContentTitle>
       <ContentSubtitle>SHOP NOW</ContentSubtitle>
     </ContentContainer>
   </MenuItemContainer>
