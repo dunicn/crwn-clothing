@@ -3,10 +3,12 @@ import React from 'react';
 import { CustomButtonContainer } from './custom-button.styles';
 
 interface CustomButtonInterface {
-  children: any;
+  children?: any;
   props?: any;
-  onClick: () => any;
+  onClick?: () => any;
   inverted?: boolean;
+  type?: any;
+  isGoogleSignIn?: boolean;
 }
 
 const CustomButton: React.FC<CustomButtonInterface> = ({
